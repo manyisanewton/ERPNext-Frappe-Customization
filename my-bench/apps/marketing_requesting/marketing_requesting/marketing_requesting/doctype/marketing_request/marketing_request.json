@@ -1,0 +1,294 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 0,
+ "autoname": "MR-.#####",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "requester_info_section",
+  "requester",
+  "department",
+  "requester_name",
+  "contact_email",
+  "contact_phone",
+  "request_details_section",
+  "request_type",
+  "column_break_request_details",
+  "needed_poster_flyer",
+  "needed_social_media",
+  "needed_video_reel",
+  "needed_brochure_profile",
+  "needed_presentation_proposal",
+  "needed_other",
+  "context_section",
+  "objective",
+  "audience",
+  "revenue_linked",
+  "timeline_section",
+  "deadline_date",
+  "deadline_reason",
+  "attachments_section",
+  "attachments",
+  "checklist_section",
+  "content_provided",
+  "images_provided",
+  "technical_info_provided",
+  "approver_identified",
+  "assignment_section",
+  "status",
+  "priority",
+  "assigned_to",
+  "hod_notes",
+  "updates_section",
+  "updates",
+  "deliverables_section",
+  "deliverables"
+ ],
+ "fields": [
+  {
+   "fieldname": "requester_info_section",
+   "fieldtype": "Section Break",
+   "label": "Requester Info"
+  },
+  {
+   "fieldname": "requester",
+   "fieldtype": "Link",
+   "label": "Requester",
+   "options": "User",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "in_list_view": 1,
+   "options": "Department"
+  },
+  {
+   "fieldname": "requester_name",
+   "fieldtype": "Data",
+   "label": "Requester Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "request_details_section",
+   "fieldtype": "Section Break",
+   "label": "Request Details"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "label": "Request Type",
+   "in_list_view": 1,
+   "options": "\nSales/Revenue Support\nMarketing/Awareness\nInternal Communication\nEvent/Activation\nCompliance/Corporate"
+  },
+  {
+   "fieldname": "column_break_request_details",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "needed_poster_flyer",
+   "fieldtype": "Check",
+   "label": "Poster/Flyer"
+  },
+  {
+   "fieldname": "needed_social_media",
+   "fieldtype": "Check",
+   "label": "Social Media Content"
+  },
+  {
+   "fieldname": "needed_video_reel",
+   "fieldtype": "Check",
+   "label": "Video/Reel"
+  },
+  {
+   "fieldname": "needed_brochure_profile",
+   "fieldtype": "Check",
+   "label": "Brochure/Profile"
+  },
+  {
+   "fieldname": "needed_presentation_proposal",
+   "fieldtype": "Check",
+   "label": "Presentation/Proposal"
+  },
+  {
+   "fieldname": "needed_other",
+   "fieldtype": "Data",
+   "label": "Other (Specify)"
+  },
+  {
+   "fieldname": "context_section",
+   "fieldtype": "Section Break",
+   "label": "Context"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Small Text",
+   "label": "Objective"
+  },
+  {
+   "fieldname": "audience",
+   "fieldtype": "Select",
+   "label": "Audience",
+   "options": "\nClients\nPartners\nStaff\nPublic"
+  },
+  {
+   "fieldname": "revenue_linked",
+   "fieldtype": "Check",
+   "label": "Is this revenue-linked?"
+  },
+  {
+   "fieldname": "timeline_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "deadline_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Deadline Needed"
+  },
+  {
+   "fieldname": "deadline_reason",
+   "fieldtype": "Small Text",
+   "label": "Why this deadline?"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Marketing Request Attachment"
+  },
+  {
+   "fieldname": "checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist Confirmation"
+  },
+  {
+   "fieldname": "content_provided",
+   "fieldtype": "Check",
+   "label": "Content provided"
+  },
+  {
+   "fieldname": "images_provided",
+   "fieldtype": "Check",
+   "label": "Images/videos provided"
+  },
+  {
+   "fieldname": "technical_info_provided",
+   "fieldtype": "Check",
+   "label": "Technical info provided"
+  },
+  {
+   "fieldname": "approver_identified",
+   "fieldtype": "Check",
+   "label": "Approver identified"
+  },
+  {
+   "fieldname": "assignment_section",
+   "fieldtype": "Section Break",
+   "label": "Assignment & Tracking"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "in_list_view": 1,
+   "options": "\nNew\nAssigned\nNot Started\nIn Progress\nAwaiting Information\nReview\nCompleted",
+   "default": "New"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "in_list_view": 1,
+   "options": "\nP1 - Revenue Critical\nP2 - Brand Growth\nP3 - Internal/Low"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "in_list_view": 1,
+   "options": "User"
+  },
+  {
+   "fieldname": "hod_notes",
+   "fieldtype": "Small Text",
+   "label": "HOD Notes"
+  },
+  {
+   "fieldname": "updates_section",
+   "fieldtype": "Section Break",
+   "label": "Updates"
+  },
+  {
+   "fieldname": "updates",
+   "fieldtype": "Table",
+   "label": "Updates",
+   "options": "Marketing Request Update"
+  },
+  {
+   "fieldname": "deliverables_section",
+   "fieldtype": "Section Break",
+   "label": "Deliverables"
+  },
+  {
+   "fieldname": "deliverables",
+   "fieldtype": "Table",
+   "label": "Deliverables",
+   "options": "Marketing Request Deliverable"
+  }
+ ],
+ "is_submittable": 0,
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Marketing Requesting",
+ "name": "Marketing Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "read": 1,
+   "role": "Employee",
+   "write": 1,
+   "if_owner": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "read": 1,
+   "role": "Marketing HOD",
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "read": 1,
+   "role": "Marketing Team",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

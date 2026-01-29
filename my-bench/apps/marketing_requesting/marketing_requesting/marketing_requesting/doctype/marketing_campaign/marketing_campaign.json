@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 0,
+ "autoname": "MC-.#####",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "campaign_info_section",
+  "campaign_name",
+  "campaign_type",
+  "column_break_info",
+  "campaign_owner",
+  "status",
+  "timeline_section",
+  "start_date",
+  "end_date",
+  "audience_section",
+  "target_audience",
+  "channels_section",
+  "channels",
+  "budget_section",
+  "budget_allocated",
+  "actual_spend",
+  "performance_section",
+  "goals",
+  "reach",
+  "leads",
+  "revenue_target",
+  "revenue_achieved",
+  "roi",
+  "links_section",
+  "linked_requests"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign_info_section",
+   "fieldtype": "Section Break",
+   "label": "Campaign Info"
+  },
+  {
+   "fieldname": "campaign_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Campaign Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "campaign_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Campaign Type",
+   "options": "\nProduct Launch\nBrand Awareness\nLead Generation\nEvent\nSeasonal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_info",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "campaign_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Campaign Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPlanning\nActive\nPaused\nCompleted",
+   "default": "Planning"
+  },
+  {
+   "fieldname": "timeline_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "audience_section",
+   "fieldtype": "Section Break",
+   "label": "Target Audience"
+  },
+  {
+   "fieldname": "target_audience",
+   "fieldtype": "Small Text",
+   "label": "Target Audience"
+  },
+  {
+   "fieldname": "channels_section",
+   "fieldtype": "Section Break",
+   "label": "Channels"
+  },
+  {
+   "fieldname": "channels",
+   "fieldtype": "MultiSelect",
+   "label": "Channels",
+   "options": "Social Media\nEmail\nEvents\nPrint\nDigital Ads"
+  },
+  {
+   "fieldname": "budget_section",
+   "fieldtype": "Section Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "budget_allocated",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Budget Allocated"
+  },
+  {
+   "fieldname": "actual_spend",
+   "fieldtype": "Currency",
+   "label": "Actual Spend"
+  },
+  {
+   "fieldname": "performance_section",
+   "fieldtype": "Section Break",
+   "label": "Goals & KPIs"
+  },
+  {
+   "fieldname": "goals",
+   "fieldtype": "Small Text",
+   "label": "Goals/KPIs"
+  },
+  {
+   "fieldname": "reach",
+   "fieldtype": "Int",
+   "label": "Reach"
+  },
+  {
+   "fieldname": "leads",
+   "fieldtype": "Int",
+   "label": "Leads"
+  },
+  {
+   "fieldname": "revenue_target",
+   "fieldtype": "Currency",
+   "label": "Revenue Target"
+  },
+  {
+   "fieldname": "revenue_achieved",
+   "fieldtype": "Currency",
+   "label": "Revenue Achieved"
+  },
+  {
+   "fieldname": "roi",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "ROI"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Linked Requests"
+  },
+  {
+   "fieldname": "linked_requests",
+   "fieldtype": "Table",
+   "label": "Linked Requests",
+   "options": "Marketing Campaign Request"
+  }
+ ],
+ "is_submittable": 0,
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Marketing Requesting",
+ "name": "Marketing Campaign",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "read": 1,
+   "role": "Marketing HOD",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "read": 1,
+   "role": "Marketing Team",
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "read": 1,
+   "role": "Employee",
+   "if_owner": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

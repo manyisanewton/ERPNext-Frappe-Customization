@@ -1,0 +1,17 @@
+{
+ "creation": "2024-01-01 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Budget Utilization %",
+ "method": "marketing_requesting.marketing_requesting.analytics.get_budget_utilization",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Marketing Requesting",
+ "name": "Budget Utilization %",
+ "owner": "Administrator",
+ "show_percentage_stats": 0,
+ "type": "Custom"
+}

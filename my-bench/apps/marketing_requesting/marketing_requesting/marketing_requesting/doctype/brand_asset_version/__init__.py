@@ -1,0 +1,1 @@
+from .brand_asset_version import BrandAssetVersion

@@ -1,0 +1,124 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="mr-transparency">
+	<div class="mr-header">
+		<h1>What Marketing Is Working On Now</h1>
+		<button class="mr-theme-toggle" type="button">Toggle Theme</button>
+	</div>
+	<p class="mr-subtitle">P1 tasks in progress (no sensitive details).</p>
+	<div class="mr-board">
+		{% if tasks %}
+			{% for task in tasks %}
+				<div class="mr-card">
+					<div class="mr-card-title">{{ task.request_type or "Request" }}</div>
+					<div class="mr-card-meta">Deadline: {{ task.deadline_date or "TBD" }}</div>
+					<div class="mr-card-meta">Status: {{ task.status }}</div>
+				</div>
+			{% endfor %}
+		{% else %}
+			<div class="mr-empty">No P1 tasks are currently in progress.</div>
+		{% endif %}
+	</div>
+</div>
+<script>
+	(function () {
+		const storageKey = "mr_theme";
+		const body = document.body;
+		const btn = document.querySelector(".mr-theme-toggle");
+
+		function applyTheme(theme) {
+			body.classList.remove("mr-theme-light", "mr-theme-dark");
+			body.classList.add(theme);
+			localStorage.setItem(storageKey, theme);
+		}
+
+		const saved = localStorage.getItem(storageKey) || "mr-theme-light";
+		applyTheme(saved);
+
+		btn.addEventListener("click", function () {
+			const next = body.classList.contains("mr-theme-dark")
+				? "mr-theme-light"
+				: "mr-theme-dark";
+			applyTheme(next);
+		});
+	})();
+</script>
+{% endblock %}
+
+{% block style %}
+<style>
+	.mr-theme-light {
+		background: #ffffff;
+		color: #000000;
+	}
+
+	.mr-theme-dark {
+		background: #000000;
+		color: #ffffff;
+	}
+
+	.mr-transparency {
+		max-width: 980px;
+		margin: 2rem auto;
+		padding: 1.5rem;
+		border: 1px solid currentColor;
+	}
+
+	.mr-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.mr-subtitle {
+		margin: 0.5rem 0 1.5rem;
+		font-size: 0.95rem;
+	}
+
+	.mr-theme-toggle {
+		padding: 0.5rem 1rem;
+		border: 1px solid currentColor;
+		background: transparent;
+		color: inherit;
+		cursor: pointer;
+	}
+
+	.mr-board {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 1rem;
+	}
+
+	.mr-card {
+		border: 1px solid currentColor;
+		padding: 1rem;
+		min-height: 120px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.mr-card-title {
+		font-weight: 600;
+	}
+
+	.mr-card-meta {
+		font-size: 0.9rem;
+	}
+
+	.mr-empty {
+		border: 1px dashed currentColor;
+		padding: 1.5rem;
+		text-align: center;
+	}
+
+	@media (max-width: 640px) {
+		.mr-header {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+</style>
+{% endblock %}

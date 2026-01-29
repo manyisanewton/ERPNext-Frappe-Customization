@@ -1,0 +1,85 @@
+{
+ "charts": [
+  {
+   "chart_name": "Requests by Department",
+   "label": "Requests by Department"
+  },
+  {
+   "chart_name": "Pending Requests by Priority",
+   "label": "Pending Requests by Priority"
+  },
+  {
+   "chart_name": "Campaign ROI Trend",
+   "label": "Campaign ROI Trend"
+  },
+  {
+   "chart_name": "Work Distribution by Team Member",
+   "label": "Work Distribution by Team Member"
+  },
+  {
+   "chart_name": "Monthly Request Volume Trend",
+   "label": "Monthly Request Volume Trend"
+  }
+ ],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Marketing Analytics</b></span>\",\"col\":12}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Campaigns\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Requests\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed This Month\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Budget Utilization %\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Average Turnaround Time\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Requests by Department\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Pending Requests by Priority\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Campaign ROI Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Work Distribution by Team Member\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Request Volume Trend\",\"col\":12}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Insights</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Marketing Insights\",\"col\":3}}]",
+ "creation": "2024-01-01 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "chart",
+ "is_hidden": 1,
+ "label": "Marketing Analytics",
+ "links": [],
+ "module": "Marketing Requesting",
+ "modified": "2024-01-01 00:00:00.000000",
+ "name": "Marketing Analytics",
+ "number_cards": [
+  {
+   "label": "Active Campaigns",
+   "number_card_name": "Active Campaigns"
+  },
+  {
+   "label": "Pending Requests",
+   "number_card_name": "Pending Requests"
+  },
+  {
+   "label": "Completed This Month",
+   "number_card_name": "Completed This Month"
+  },
+  {
+   "label": "Budget Utilization %",
+   "number_card_name": "Budget Utilization %"
+  },
+  {
+   "label": "Average Turnaround Time",
+   "number_card_name": "Average Turnaround Time"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Marketing HOD"
+  },
+  {
+   "role": "Marketing Team"
+  }
+ ],
+ "shortcuts": [
+  {
+   "label": "Marketing Insights",
+   "link_to": "Marketing Insights",
+   "type": "Report"
+  }
+ ],
+ "title": "Marketing Analytics"
+}
